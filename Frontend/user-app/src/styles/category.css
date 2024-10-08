@@ -1,0 +1,194 @@
+/* General Container */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns layout for desktop */
+    gap: 40px 0px; /* Space between cards */
+    justify-items: center; /* Center the cards within the grid */
+    margin: 20px 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+    .category-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .category-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .category-container {
+        grid-template-columns: 1fr; /* Single column for mobile devices */
+    }
+}
+
+/* Category Card */
+.category-card {
+    width: 100%; /* Cards take full width within their grid column */
+    max-width: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover effect for category card */
+.category-card:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px);
+}
+
+/* Search Bar */
+.category-search-input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Pagination */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Dark Mode Styles */
+/* .dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+} */
+
+.dark-mode .category-card {
+    color: #fff;
+    background-color: #322b2b;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 10px rgba(237, 239, 240, 0.1);
+}
+
+.dark-mode .category-card:hover {
+    box-shadow: 4px 4px 15px rgba(237, 239, 240, 0.2); 
+}
+
+.dark-mode .category-search-input {
+    background-color: #444;
+    color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+.dark-mode .pagination-button {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode .pagination-button:disabled {
+
+    color: #fff; /* White text in pagination buttons */
+
+    background-color: #777;
+}
+
+.dark-mode .page-info {
+    color: #f2f2f2;
+}
+/* Dark Mode Styles */
+/* .dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+} */
+
+.dark-mode .category-card {
+    color: #fff; /* White text color in dark mode */
+    background-color: #322b2b; /* Darker background for the card */
+    border: 1px solid #444; /* Border color for dark mode */
+    box-shadow: 2px 2px 10px rgba(237, 239, 240, 0.1);
+}
+
+
+
+
+/* Ensure the text in the card content is white */
+.dark-mode .category-card p {
+    color: #fff; /* White text for paragraph in cards */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Centering the Categories Title and Making It Bold */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space below the title */
+    color: #333; /* Color for light mode */
+}
+
+/* Center the Search Bar */
+.category-search-input {
+    display: block;
+    margin: 0 auto 20px auto; /* Center the search bar horizontally */
+    width: 60%; /* Adjust width as necessary */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Dark Mode Adjustments for Title and Search Bar */
+.dark-mode h2 {
+    color: #f1f1f1; /* White or light color for dark mode */
+}
+
+.dark-mode .category-search-input {
+    background-color: #444;
+    color: #f1f1f1;
+    border: 1px solid #555;
+}
